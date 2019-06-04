@@ -1,0 +1,17 @@
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApiTest.deps.json
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApiTest.runtimeconfig.json
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApiTest.runtimeconfig.dev.json
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApiTest.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApi.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApi.pdb
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.csprojAssemblyReference.cache
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.csproj.CoreCompileInputs.cache
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.AssemblyInfoInputs.cache
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.AssemblyInfo.cs
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.csproj.CopyComplete
+C:\Projetos\SkeletonApi\SkeletonApiTest\bin\Debug\netcoreapp2.0\SkeletonApiTest.pdb
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.dll
+C:\Projetos\SkeletonApi\SkeletonApiTest\obj\Debug\netcoreapp2.0\SkeletonApiTest.pdb
