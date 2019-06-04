@@ -32,14 +32,14 @@ namespace SkeletonApiTest.Service
         [Fact]
         public void Test_Insert_Ok()
         {
-            var user = new User { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
+            var user = new EntityUser { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
             Assert.Equal(1, _serviceUser.Insert(user));
         }
 
         [Fact]
         public void Test_Update_Ok()
         {
-            var user = new User { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
+            var user = new EntityUser { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
             _serviceUser.Insert(user);
             user.Name = "Name2";
             Assert.Equal(1, _serviceUser.Update(user));
@@ -49,7 +49,7 @@ namespace SkeletonApiTest.Service
         [Fact]
         public void Test_Delete_Ok()
         {
-            var user = new User { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
+            var user = new EntityUser { Id = Guid.NewGuid(), Email = "teste@teste.com", Name = "Name", Password = "123" };
             _serviceUser.Insert(user);
             Assert.Equal(1, _serviceUser.Remove(user));
             Assert.Null(_serviceUser.Find(user));

@@ -8,7 +8,7 @@ namespace SkeletonApi.Api.Mapper
     {
         public UserProfile()
         {
-            CreateMap<User, UserDto>();
+            CreateMap<EntityUser, UserDto>();
         }
     }
 }

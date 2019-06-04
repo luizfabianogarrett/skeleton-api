@@ -9,3 +9,14 @@ C:\Projetos\SkeletonApi\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.Assembly
 C:\Projetos\SkeletonApi\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.AssemblyInfo.cs
 C:\Projetos\SkeletonApi\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.dll
 C:\Projetos\SkeletonApi\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.pdb
+C:\Projetos\skeleton-api\SkeletonApi\bin\Debug\netcoreapp2.0\SkeletonApi.deps.json
+C:\Projetos\skeleton-api\SkeletonApi\bin\Debug\netcoreapp2.0\SkeletonApi.runtimeconfig.json
+C:\Projetos\skeleton-api\SkeletonApi\bin\Debug\netcoreapp2.0\SkeletonApi.runtimeconfig.dev.json
+C:\Projetos\skeleton-api\SkeletonApi\bin\Debug\netcoreapp2.0\SkeletonApi.dll
+C:\Projetos\skeleton-api\SkeletonApi\bin\Debug\netcoreapp2.0\SkeletonApi.pdb
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.csprojAssemblyReference.cache
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.csproj.CoreCompileInputs.cache
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.AssemblyInfoInputs.cache
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.AssemblyInfo.cs
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.dll
+C:\Projetos\skeleton-api\SkeletonApi\obj\Debug\netcoreapp2.0\SkeletonApi.pdb

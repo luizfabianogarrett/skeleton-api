@@ -4,9 +4,10 @@ namespace SkeletonApi.Service
 {
     public interface IServiceUser
     {
-        int Insert(User user);
-        int Update(User user);
-        int Remove(User user);
-        User Find(User user);
+        int Insert(EntityUser user);
+        int Update(EntityUser user);
+        int Remove(EntityUser user);
+        EntityUser Find(EntityUser user);
+        EntityUser Authenticate(string email, string password);
     }
 }
