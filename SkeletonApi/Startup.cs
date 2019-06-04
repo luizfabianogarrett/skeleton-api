@@ -9,8 +9,6 @@ using Microsoft.IdentityModel.Tokens;
 using SkeletonApi.Data;
 using SkeletonApi.Service;
 using System;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 
 namespace SkeletonApi
@@ -26,17 +24,13 @@ namespace SkeletonApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-
-            var s = ComputeSha256Hash();
-
-            Environment.SetEnvironmentVariable("Secret", s);
+            Environment.SetEnvironmentVariable("Secret", GenerateKey());
 
             services.AddMvc();
             services.AddScoped<IServiceUser, ServiceUser>();
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataUserMemory"));
             services.AddAutoMapper(typeof(Startup));
 
-            
             var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("Secret"));
             services.AddAuthentication(x =>
             {
@@ -55,17 +49,14 @@ namespace SkeletonApi
                     ValidateAudience = false
                 };
             });
-
-
         }
 
-        private string ComputeSha256Hash()
+        private string GenerateKey()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             for (int i = 0; i < 128; i++)
-            {
                 sb.Append("a");
-            }
+
             return sb.ToString();
         }
 
