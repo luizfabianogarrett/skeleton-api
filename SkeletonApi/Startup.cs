@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using SkeletonApi.Data;
 using SkeletonApi.Service;
+using SkeletonApi.Util;
 using System;
 using System.Text;
 
@@ -24,7 +25,7 @@ namespace SkeletonApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            Environment.SetEnvironmentVariable("Secret", GenerateKey());
+            Environment.SetEnvironmentVariable("Secret", Helper.GenerateKey());
 
             services.AddMvc();
             services.AddScoped<IServiceUser, ServiceUser>();
@@ -50,16 +51,7 @@ namespace SkeletonApi
                 };
             });
         }
-
-        private string GenerateKey()
-        {
-            var sb = new StringBuilder();
-            for (int i = 0; i < 128; i++)
-                sb.Append("a");
-
-            return sb.ToString();
-        }
-
+               
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

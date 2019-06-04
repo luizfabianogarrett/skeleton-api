@@ -118,5 +118,26 @@ namespace SkeletonApiTest.Api
             _serviceUser.Verify(s => s.Remove(It.IsAny<EntityUser>()), Times.Never);
         }
 
+        [Fact]
+        public void Test_Authenticate_Ok()
+        {
+            var newUser = Builder<EntityUser>.CreateNew().Build();
+            var userDto = Builder<UserDto>.CreateNew().Build();
+            _mapper.Setup(m => m.Map<EntityUser>(It.IsAny<UserDto>())).Returns(newUser);
+            _serviceUser.Setup(s => s.Authenticate(It.IsAny<string>(), It.IsAny<string>())).Returns(newUser);
+            var result = _controller.Authenticate(userDto) as OkObjectResult;
+            Assert.Equal(200, result.StatusCode);
+        }
+
+        [Fact]
+        public void Test_Authenticate_NotFound()
+        {
+            var newUser = Builder<EntityUser>.CreateNew().Build();
+            var userDto = Builder<UserDto>.CreateNew().Build();
+            _mapper.Setup(m => m.Map<EntityUser>(It.IsAny<UserDto>())).Returns(newUser);
+            var result = _controller.Authenticate(userDto) as BadRequestResult;
+            Assert.Equal(400, result.StatusCode);
+        }
+
     }
 }

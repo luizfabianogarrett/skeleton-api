@@ -61,7 +61,12 @@ namespace SkeletonApi.Service
                 return null;
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("Secret"));
+            var secretKey = Environment.GetEnvironmentVariable("Secret");
+
+            if (secretKey == null)
+                secretKey = Guid.NewGuid().ToString();
+
+            var key = Encoding.ASCII.GetBytes(secretKey);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
