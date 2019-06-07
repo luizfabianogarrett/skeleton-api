@@ -12,6 +12,5 @@ namespace SkeletonApi.Util
 
             return sb.ToString();
         }
-
     }
 }
