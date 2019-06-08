@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using SkeletonApi.Data;
+using SkeletonApi.Entity;
 using SkeletonApi.Service;
 using SkeletonApi.Util;
 using System;
@@ -28,6 +29,7 @@ namespace SkeletonApi
             Environment.SetEnvironmentVariable("Secret", Helper.GenerateKey());
 
             services.AddMvc();
+            services.AddScoped<IRepository<EntityUser>, BaseRepository<EntityUser>>();
             services.AddScoped<IServiceUser, ServiceUser>();
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataUserMemory"));
             services.AddAutoMapper(typeof(Startup));

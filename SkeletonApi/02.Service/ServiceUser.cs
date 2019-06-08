@@ -11,11 +11,11 @@ namespace SkeletonApi.Service
 {
     public class ServiceUser : IServiceUser
     {
-        private readonly DataContext _context;
+        private readonly IRepository<EntityUser> _repository; 
 
-        public ServiceUser(DataContext context)
+        public ServiceUser(IRepository<EntityUser> repository)
         {
-            _context = context;
+            _repository = repository;
 
             InitializeDefaultUser();
         }
@@ -23,7 +23,7 @@ namespace SkeletonApi.Service
         private void InitializeDefaultUser()
         {
             var newUser = new EntityUser { Email = "admin@admin.com", Name = "Admin", Password = "pass123" };
-            var userRegistered = _context.Users.FirstOrDefault(x => x.Email == newUser.Email && x.Password == newUser.Password);
+            var userRegistered = _repository.SelectAll().FirstOrDefault(x => x.Email == newUser.Email && x.Password == newUser.Password);
 
             if (userRegistered == null)
                 Insert(newUser);
@@ -31,31 +31,28 @@ namespace SkeletonApi.Service
 
         public int Remove(EntityUser user)
         {
-            _context.Users.Remove(user);
-            return _context.SaveChanges();
+            return _repository.Remove(user.Id);
         }
 
         public EntityUser Find(EntityUser user)
         {
-            return _context.Users.FirstOrDefault(s => s.Id == user.Id);
+            return _repository.Select(user.Id);
         }
 
         public int Insert(EntityUser user)
         {
             user.Id = Guid.NewGuid();
-            _context.Users.Add(user);
-            return _context.SaveChanges();
+            return _repository.Insert(user);
         }
 
         public int Update(EntityUser user)
         {
-            _context.Users.Update(user);
-            return _context.SaveChanges();
+            return _repository.Update(user);
         }
 
         public EntityUser Authenticate(string email, string password)
         {
-            var user = _context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);
+            var user = _repository.SelectAll().FirstOrDefault(x => x.Email == email && x.Password == password);
 
             if (user == null)
                 return null;

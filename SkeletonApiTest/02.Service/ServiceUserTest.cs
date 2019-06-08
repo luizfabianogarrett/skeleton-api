@@ -22,7 +22,7 @@ namespace SkeletonApiTest.Service
             b.UseInMemoryDatabase("DataUserMemoryTest", null);
             options = b.Options;
             _context = new DataContext(options);
-            _serviceUser = new ServiceUser(_context);
+            _serviceUser = new ServiceUser(new BaseRepository<EntityUser>(_context));
             _userProfile = new UserProfile();
         }
 

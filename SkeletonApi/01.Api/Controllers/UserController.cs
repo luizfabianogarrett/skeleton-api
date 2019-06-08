@@ -91,7 +91,5 @@ namespace SkeletonApi.Controllers
 
             return Ok(user);
         }
-
-
     }
 }

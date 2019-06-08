@@ -10,6 +10,8 @@ namespace SkeletonApi.Data
 
         }
 
-        public DbSet<EntityUser> Users { get; set; }
+        public DbSet<EntityUser> User { get; set; }
+            
     }
 }
+
